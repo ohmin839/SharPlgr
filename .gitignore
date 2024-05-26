@@ -1,0 +1,8 @@
+# vscode
+.devcontainer
+.github
+.vscode
+
+# docker
+.data
+.secrets
