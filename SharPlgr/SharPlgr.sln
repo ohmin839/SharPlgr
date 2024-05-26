@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Api", "SharPlgr.Api\SharPlgr.Api.csproj", "{A1866B63-8D29-41BE-80CC-FEA181EA2151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Api.Test", "SharPlgr.Api.Test\SharPlgr.Api.Test.csproj", "{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1866B63-8D29-41BE-80CC-FEA181EA2151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1866B63-8D29-41BE-80CC-FEA181EA2151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1866B63-8D29-41BE-80CC-FEA181EA2151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1866B63-8D29-41BE-80CC-FEA181EA2151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
