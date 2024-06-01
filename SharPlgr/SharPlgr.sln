@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Api", "SharPlgr.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Api.Test", "SharPlgr.Api.Test\SharPlgr.Api.Test.csproj", "{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Cmdlet", "SharPlgr.Cmdlet\SharPlgr.Cmdlet.csproj", "{CBD89392-21BE-419E-8563-42E05DCD255B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E866F29F-6CCC-4172-BFD0-CEB56356F5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD89392-21BE-419E-8563-42E05DCD255B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD89392-21BE-419E-8563-42E05DCD255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD89392-21BE-419E-8563-42E05DCD255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD89392-21BE-419E-8563-42E05DCD255B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
