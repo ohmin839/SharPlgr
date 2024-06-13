@@ -4,6 +4,7 @@ using System.Management.Automation;
 namespace SharPlgr.Cmdlet;
 
 [Cmdlet(VerbsCommon.Get, "PolytonicWords")]
+[Alias("sharplgrcoll")]
 public class Collectormdlet : System.Management.Automation.Cmdlet
 {
     private List<string> allWords = new();

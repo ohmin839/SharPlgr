@@ -4,6 +4,7 @@ using System.Management.Automation;
 namespace SharPlgr.Cmdlet;
 
 [Cmdlet(VerbsData.ConvertTo, "PolytonicText")]
+[Alias("sharplgrconv")]
 public class ConverterCmdlet : System.Management.Automation.Cmdlet
 {
     [Parameter(
