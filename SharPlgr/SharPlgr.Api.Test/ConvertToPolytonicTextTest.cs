@@ -51,7 +51,7 @@ public class ConvertToPolytonicTextTest
             yield return new object?[] { ">E", "Ἐ" };
             yield return new object?[] { ">'E", "Ἔ" };
             yield return new object?[] { ">`E", "Ἒ" };
-               // large eta
+            // large eta
             yield return new object?[] { "^E", "Η" };
             yield return new object?[] { "^E|", "ῌ" };
             yield return new object?[] { "'^E", "Ή" };

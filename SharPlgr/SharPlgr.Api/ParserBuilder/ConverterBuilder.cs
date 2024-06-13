@@ -1,7 +1,8 @@
 using Sprache;
 
 namespace SharPlgr.Api.ParserBuilder;
-internal partial class ConverterBuilder {
+internal partial class ConverterBuilder
+{
     internal Parser<string> BuildConverter()
     {
         return BuildLetters().End();

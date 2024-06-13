@@ -1,6 +1,7 @@
 namespace SharPlgr.Api.ParserBuilder;
 
-internal partial class ConverterBuilder {
+internal partial class ConverterBuilder
+{
     private int CalculateScore(string text)
     {
         return AddScoreIfDialesis(text,

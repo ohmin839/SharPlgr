@@ -6,7 +6,7 @@ using static SharPlgr.Api.SharPlgrApi;
 
 namespace SharPlgr.Api.Test;
 
- public class CollectPolytonicWordsTests
+public class CollectPolytonicWordsTests
 {
     [Theory]
     [ClassData(typeof(TestData))]
