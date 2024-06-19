@@ -21,7 +21,7 @@ public class SharPlgrApi
     {
         if (string.IsNullOrEmpty(text))
         {
-            return string.Empty;
+            return "";
         }
         else
         {
@@ -33,7 +33,7 @@ public class SharPlgrApi
     {
         if (string.IsNullOrEmpty(text))
         {
-            return new List<string>(0);
+            return [];
         }
         else
         {
