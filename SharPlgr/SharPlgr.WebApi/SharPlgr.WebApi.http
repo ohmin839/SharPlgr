@@ -1,0 +1,6 @@
+@SharPlgr.WebApi_HostAddress = http://localhost:5128
+
+GET {{SharPlgr.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
