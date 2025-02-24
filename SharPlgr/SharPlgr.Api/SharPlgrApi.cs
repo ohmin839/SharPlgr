@@ -5,16 +5,13 @@ namespace SharPlgr.Api;
 
 public class SharPlgrApi
 {
-    private static readonly Parser<string> CONVERTER;
-    private static readonly Parser<IEnumerable<string>> COLLECTOR;
+    private static readonly ConverterBuilder CONVERTER_BUILDER;
+    private static readonly CollectorBuilder COLLECTOR_BUILDER;
 
     static SharPlgrApi()
     {
-        ConverterBuilder converterBuilder = new ConverterBuilder();
-        CONVERTER = converterBuilder.BuildConverter();
-
-        CollectorBuilder collectorBuilder = new CollectorBuilder();
-        COLLECTOR = collectorBuilder.BuildCollector();
+        CONVERTER_BUILDER = new ConverterBuilder();
+        COLLECTOR_BUILDER = new CollectorBuilder();
     }
 
     public static string ConvertToPolytonicText(string text)
@@ -25,7 +22,8 @@ public class SharPlgrApi
         }
         else
         {
-            return CONVERTER.Parse(text);
+            var converter = CONVERTER_BUILDER.BuildConverter();
+            return converter.Parse(text);
         }
     }
 
@@ -37,7 +35,8 @@ public class SharPlgrApi
         }
         else
         {
-            return COLLECTOR.Parse(text).ToList();
+            var collector = COLLECTOR_BUILDER.BuildCollector();
+            return collector.Parse(text).ToList();
         }
     }
 }
