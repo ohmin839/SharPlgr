@@ -7,7 +7,7 @@ namespace SharPlgr.Cmdlet;
 [Alias("sharplgrcoll")]
 public class Collectormdlet : System.Management.Automation.Cmdlet
 {
-    private List<string> allWords = new();
+    private SortedSet<string> allWords = new();
 
     [Parameter(
         Position = 0,
@@ -25,13 +25,20 @@ public class Collectormdlet : System.Management.Automation.Cmdlet
             foreach (var line in Lines)
             {
                 var words = CollectPolytonicWords(line);
-                allWords.AddRange(words);
+                foreach (var word in words)
+                {
+                    if (!allWords.Contains(word))
+                    {
+                        WriteObject(word);
+                        allWords.Add(word);
+                    }
+                }
             }
         }
+    }
 
-        foreach (var word in allWords)
-        {
-            WriteObject(word);
-        }
+    protected override void EndProcessing()
+    {
+        allWords.Clear();
     }
 }

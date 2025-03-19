@@ -17,7 +17,7 @@ public class ConvertToPolytonicTextTest
     {
         public IEnumerator<object?[]> GetEnumerator()
         {
-            // null or empoty
+            // null or empy
             yield return new object?[] { null, "" };
             yield return new object?[] { "", "" };
             // large alpha
@@ -316,6 +316,9 @@ public class ConvertToPolytonicTextTest
             yield return new object?[] { "nkh", "γχ" };
             yield return new object?[] { "x", "ξ" };
             yield return new object?[] { "p", "π" };
+            yield return new object?[] { "r", "ρ" };
+            yield return new object?[] { "<r", "ῥ" };
+            yield return new object?[] { ">r", "ῤ" };
             yield return new object?[] { "s", "ς" };
             yield return new object?[] { "sa", "σα" };
             yield return new object?[] { "ssa", "σσα" };
@@ -344,6 +347,8 @@ public class ConvertToPolytonicTextTest
             yield return new object?[] { "<", "<" };
             yield return new object?[] { ">", ">" };
             // multi-byte character
+            yield return new object?[] { "«", "«" };
+            yield return new object?[] { "»", "»" };
             yield return new object?[] { "あ", "あ" };
         }
 
