@@ -8,21 +8,20 @@ converts ASCII strings into strings in polytonic Greek.
 PS> ConvertTo-PolytonicText ">'anthr^opos"
 ἄνθρωπός
 
-PS> Get-Content ./alpha.txt | ConvertTo-PolytonicText
+PS> Get-Content ./Alpha.txt -TotalCount 1 | ConvertTo-PolytonicText
 Πάντες ἄνθρωποι τοῦ εἰδέναι ὀρέγονται φύσει. σημεῖον δ'
-...
 ```
 
 ## Get-PolytonicWords
-The cmdlet `CollectPolytonicWords`(`sharplgrcoll` for short)
-splits texts in polytonic Greek into words:
+The cmdlet `Get-PolytonicWords`(`sharplgrcoll` for short)
+extracts words uniquely from texts in polytonic Greek.
 ```powershell
 PS> ConvertTo-PolytonicText "<o >'anthr^op'os tis" | Get-PolytonicWords
 ὁ
 ἄνθρωπός
 τις
 
-PS> Get-Content ./alpha.txt | ConvertTo-PolytonicText | Get-PolytonicWords 
+PS> Get-Content ./Alpha.txt -TotalCount 1 | ConvertTo-PolytonicText | Get-PolytonicWords 
 Πάντες
 ἄνθρωποι
 τοῦ
@@ -31,7 +30,6 @@ PS> Get-Content ./alpha.txt | ConvertTo-PolytonicText | Get-PolytonicWords
 φύσει
 σημεῖον
 δ'
-...
 ```
 
 ## Installation
