@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+TARGET_USER="app"
+TARGET_USER_PASSWD=$(cat $(dirname ${BASH_SOURCE:-$0})/postgres-user-${TARGET_USER}-passwd)
+TARGET_DB="sharplgrdb"
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+	CREATE USER $TARGET_USER WITH PASSWORD '$TARGET_USER_PASSWD';
+	CREATE DATABASE $TARGET_DB;
+EOSQL
+
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$TARGET_DB" <<-EOSQL
+    CREATE TABLE t_raw_ward (
+        id SERIAL PRIMARY KEY,
+        word VARCHAR NOT NULL UNIQUE
+    );
+
+    GRANT USAGE ON SCHEMA public TO $TARGET_USER;
+    GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO $TARGET_USER;
+EOSQL
