@@ -44,5 +44,6 @@ Then, launch Powershell and run `Import-Module`. That's it.
 $ pwsh
 ```
 ```powershell
-PS> Import-Module bin/Debug/net8.0/SharPlgr.Cmdlet.psd1
+PS> cd bin/Debug/net8.0
+PS> Import-Module ./SharPlgr.Cmdlet.psd1
 ```
