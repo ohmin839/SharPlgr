@@ -13,7 +13,7 @@ services:
       - ./.data/postgres:/var/lib/postgresql/data
       - ./docker/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
-      - 5432
+      - 61073:5432
     secrets:
       - postgres-root-passwd
 secrets:
