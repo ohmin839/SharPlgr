@@ -23,7 +23,7 @@ public class PolytonicTextController : ControllerBase
         _dbContext = dbContext;
     }
 
-    [Route("Converted/String")]
+    [Route("ConvertedString")]
     [HttpPost]
     public string ConvertToPolytonicText([FromBody]string text)
     {
@@ -31,7 +31,7 @@ public class PolytonicTextController : ControllerBase
         return converted;
     }
 
-    [Route("Converted/File")]
+    [Route("ConvertedFile")]
     [HttpPost]
     public async Task<IActionResult> ConvertToPolytonicText(IFormFile file)
     {
@@ -62,7 +62,7 @@ public class PolytonicTextController : ControllerBase
         }
     }
 
-    [Route("NewRawWords/File")]
+    [Route("NewRawWords")]
     [HttpPost]
     public async Task<IActionResult> ExtractPolytonicWords(IFormFile file)
     {

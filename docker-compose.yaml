@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/dotnet/Dockerfile
+    depends_on:
+      - postgres
   postgres:
     image: postgres:16.0-bullseye
     environment:
