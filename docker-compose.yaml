@@ -1,6 +1,19 @@
-version: "3.8"
 services:
   dotnet:
     build:
       context: .
       dockerfile: ./docker/dotnet/Dockerfile
+  postgres:
+    image: postgres:16.0-bullseye
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-root-passwd
+    volumes:
+      - ./.data/postgres:/var/lib/postgresql/data
+      - ./docker/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 5432
+    secrets:
+      - postgres-root-passwd
+secrets:
+  postgres-root-passwd:
+    file: .secrets/postgres-root-passwd

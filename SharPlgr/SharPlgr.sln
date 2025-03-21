@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Api.Test", "SharPl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.Cmdlet", "SharPlgr.Cmdlet\SharPlgr.Cmdlet.csproj", "{CBD89392-21BE-419E-8563-42E05DCD255B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharPlgr.WebApi", "SharPlgr.WebApi\SharPlgr.WebApi.csproj", "{8188AAB8-8D03-4C0B-834C-311AB326C3C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{CBD89392-21BE-419E-8563-42E05DCD255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD89392-21BE-419E-8563-42E05DCD255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD89392-21BE-419E-8563-42E05DCD255B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8188AAB8-8D03-4C0B-834C-311AB326C3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8188AAB8-8D03-4C0B-834C-311AB326C3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8188AAB8-8D03-4C0B-834C-311AB326C3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8188AAB8-8D03-4C0B-834C-311AB326C3C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
